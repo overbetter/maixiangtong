@@ -13,11 +13,12 @@ class CreateRelUsersPhone extends Migration
      */
     public function up()
     {
-        //
         Schema::create('rel_users_phone', function (Blueprint $table) {
             $table->increments('id');
             $table->string('guid')->comment('用户手机关联表');
             $table->string('phone')->comment('手机');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -28,6 +29,6 @@ class CreateRelUsersPhone extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('rel_users_phone');
     }
 }

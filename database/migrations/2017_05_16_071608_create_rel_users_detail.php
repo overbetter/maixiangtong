@@ -13,7 +13,6 @@ class CreateRelUsersDetail extends Migration
      */
     public function up()
     {
-        //
         Schema::create('rel_users_detail', function (Blueprint $table) {
             $table->increments('id');
             $table->string('guid')->comment('用户详情关联表');
@@ -32,6 +31,6 @@ class CreateRelUsersDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('rel_users_detail');
     }
 }

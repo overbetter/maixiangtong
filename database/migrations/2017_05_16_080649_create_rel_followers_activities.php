@@ -13,9 +13,6 @@ class CreateRelFollowersActivities extends Migration
      */
     public function up()
     {
-        //
-
-         //
          Schema::create('rel_followers_activities', function (Blueprint $table) {
             $table->increments('id')->comment('用户关注活动关联表');
             $table->string('activity_guid')->comment('活动guid');
@@ -32,6 +29,6 @@ class CreateRelFollowersActivities extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('rel_followers_activities');
     }
 }

@@ -14,16 +14,12 @@ class CreateDataNotification extends Migration
     public function up()
     {
         Schema::create('data_notification', function (Blueprint $table) {
-           
-
             $table->increments('id')->comment('系统通知表');
             $table->string('title')->comment('标题');
             $table->string('content')->comment('内容');
             $table->string('to_user_guid')->comment('发送对象guid');
-          
             $table->timestamps();
             $table->softDeletes();
-       
         });
     }
 
@@ -34,6 +30,6 @@ class CreateDataNotification extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('create_data_notification');
+        Schema::dropIfExists('data_notification');
     }
 }
