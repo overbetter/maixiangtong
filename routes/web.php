@@ -12,3 +12,20 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('user', UserController::class); // 用户
 });
 
+
+
+//短信验证码
+Route::get('msgcode','CodeController@msgCode');
+//图形验证码
+Route::get('graphcode','CodeController@graphCode');
+
+//用户注册页
+Route::resource('register','Home\UserController@create');
+//创建用户
+Route::resource('create','Home\UserController@store');
+//用户登录
+Route::resource('login','Home\LoginController');
+
+
+//重置密码
+Route::resource('resetpassword','Home\ResetpasswordController');

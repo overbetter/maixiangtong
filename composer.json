@@ -11,7 +11,14 @@
     "php": ">=5.6.4",
     "laravel/framework": "5.4.*",
     "laravel/tinker": "~1.0",
-    "prettus/l5-repository": "^2.6"
+    "prettus/l5-repository": "^2.6",
+    "overtrue/pinyin": "~3.0",
+    "bosnadev/repositories": " 0.*",
+    "gregwar/captcha": "1.*",
+    "predis/predis": "1.0.*",
+    "flc/alidayu": "^2.0",
+    "qiniu/php-sdk": "^7.1",
+    "stevenyangecho/laravel-u-editor": "^1.4"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
